@@ -1,0 +1,502 @@
+
+binary attributes
+  An object which does not define has_test?
+    returns false when has_test? is called
+  An object which defines has_test?
+    returns true when has_test? is called
+  An object which does not define is_test?
+    returns false when is_test? is called
+  An object which defines is_test?
+    returns true when is_test? is called
+
+A class having Mobile ability
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #is_random? returns false
+
+An Electric class
+  #is_electric? returns true
+
+A Non-Electric class
+  #is_electric? returns false
+
+A class having Weapons ability
+  #has_weapons? returns true
+  #is_mobile? returns false
+  #is_random? returns false
+
+A class having Weapons ability that uses default "max_ammo" value
+  initially remaining_ammo == max_ammo
+
+A class having Weapons ability
+  initially remaining_ammo == max_ammo
+
+A class having Weapons ability
+Bang!
+  #shoot! expends a single round when ammo remains
+Bang!
+Bang!
+Click!
+  #shoot! fails when no ammo remains
+Bang!
+  #reload! restores 'max_ammo' shells
+
+A class having both Mobile and Weapons ability
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #is_random? returns false
+
+Person
+  Homer Simpson has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Unarmed Immobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Unarmed Mobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Armed Immobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns true
+
+PersonWithAbilities
+  Armed Mobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+
+Vehicle with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Car with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricCar with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Motorcycle with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricMotorcycle with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Tank with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricTank with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Helicopter with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 3
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+QuadCopter with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 0
+  #max_passengers returns 0
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Plane with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 5
+  #max_passengers returns Not Available
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Vehicle with constructor attrs {:manufacturer=>"Dodge"}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Dodge
+  #model_num returns Not Available
+
+Car with constructor attrs {:manufacturer=>"REO Speedwagon", :wheelnum=>6}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 6
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns REO Speedwagon
+  #model_num returns Not Available
+
+Motorcycle with constructor attrs {:manufacturer=>"Honda", :age=>12}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns 12
+  #manufacturer returns Honda
+  #model_num returns Not Available
+
+Tank with constructor attrs {:manufacturer=>"Ford", :model_num=>"Sherman", :age=>73}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns 73
+  #manufacturer returns Ford
+  #model_num returns Sherman
+
+Helicopter with constructor attrs {:manufacturer=>"Bell Aerospace", :age=>73, :max_passengers=>8}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 3
+  #max_passengers returns 8
+  #age returns 73
+  #manufacturer returns Bell Aerospace
+  #model_num returns Not Available
+
+QuadCopter with constructor attrs {:manufacturer=>"Amazon", :age=>2}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 0
+  #max_passengers returns 0
+  #age returns 2
+  #manufacturer returns Amazon
+  #model_num returns Not Available
+
+Plane with constructor attrs {:manufacturer=>"Boeing", :model_num=>"787", :age=>3, :wheelnum=>16, :max_passengers=>196}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 16
+  #max_passengers returns 196
+  #age returns 3
+  #manufacturer returns Boeing
+  #model_num returns 787
+
+Finished in 0.06765 seconds (files took 0.151 seconds to load)
+176 examples, 0 failures
+
+
+binary attributes
+  An object which does not define has_test?
+    returns false when has_test? is called
+  An object which defines has_test?
+    returns true when has_test? is called
+  An object which does not define is_test?
+    returns false when is_test? is called
+  An object which defines is_test?
+    returns true when is_test? is called
+
+A class having Mobile ability
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #is_random? returns false
+
+An Electric class
+  #is_electric? returns true
+
+A Non-Electric class
+  #is_electric? returns false
+
+A class having Weapons ability
+  #has_weapons? returns true
+  #is_mobile? returns false
+  #is_random? returns false
+
+A class having Weapons ability that uses default "max_ammo" value
+  initially remaining_ammo == max_ammo
+
+A class having Weapons ability
+  initially remaining_ammo == max_ammo
+
+A class having Weapons ability
+Bang!
+  #shoot! expends a single round when ammo remains
+Bang!
+Bang!
+Click!
+  #shoot! fails when no ammo remains
+Bang!
+  #reload! restores 'max_ammo' shells
+
+A class having both Mobile and Weapons ability
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #is_random? returns false
+
+Person
+  Homer Simpson has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Unarmed Immobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Unarmed Mobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+
+PersonWithAbilities
+  Armed Immobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns false
+  #has_weapons? returns true
+
+PersonWithAbilities
+  Armed Mobile has a first and last name
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+
+Vehicle with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Car with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricCar with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Motorcycle with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricMotorcycle with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Tank with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+ElectricTank with no constructor attrs provided
+  #is_electric? returns true
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Helicopter with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 3
+  #max_passengers returns 5
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+QuadCopter with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 0
+  #max_passengers returns 0
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Plane with no constructor attrs provided
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 5
+  #max_passengers returns Not Available
+  #age returns Not Available
+  #manufacturer returns Not Available
+  #model_num returns Not Available
+
+Vehicle with constructor attrs {:manufacturer=>"Dodge"}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 4
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns Dodge
+  #model_num returns Not Available
+
+Car with constructor attrs {:manufacturer=>"REO Speedwagon", :wheelnum=>6}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 6
+  #max_passengers returns 6
+  #age returns Not Available
+  #manufacturer returns REO Speedwagon
+  #model_num returns Not Available
+
+Motorcycle with constructor attrs {:manufacturer=>"Honda", :age=>12}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 2
+  #max_passengers returns 2
+  #age returns 12
+  #manufacturer returns Honda
+  #model_num returns Not Available
+
+Tank with constructor attrs {:manufacturer=>"Ford", :model_num=>"Sherman", :age=>73}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns true
+  #wheelnum returns 0
+  #max_passengers returns 5
+  #age returns 73
+  #manufacturer returns Ford
+  #model_num returns Sherman
+
+Helicopter with constructor attrs {:manufacturer=>"Bell Aerospace", :age=>9, :max_passengers=>8}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 3
+  #max_passengers returns 8
+  #age returns 9
+  #manufacturer returns Bell Aerospace
+  #model_num returns Not Available
+
+QuadCopter with constructor attrs {:manufacturer=>"Amazon", :age=>2}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 0
+  #max_passengers returns 0
+  #age returns 2
+  #manufacturer returns Amazon
+  #model_num returns Not Available
+
+Plane with constructor attrs {:manufacturer=>"Boeing", :model_num=>"787", :age=>3, :wheelnum=>16, :max_passengers=>196}
+  #is_electric? returns false
+  #is_mobile? returns true
+  #has_weapons? returns false
+  #wheelnum returns 16
+  #max_passengers returns 196
+  #age returns 3
+  #manufacturer returns Boeing
+  #model_num returns 787
+
+Finished in 0.06769 seconds (files took 0.14932 seconds to load)
+176 examples, 0 failures
+

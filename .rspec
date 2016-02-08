@@ -1,0 +1,7 @@
+--color
+--format documentation
+--require spec_helper
+--require ./object_monkey_patch
+--require ./mobile
+--require ./weapons
+--require test_support_classes
