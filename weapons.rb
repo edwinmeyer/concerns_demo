@@ -5,11 +5,6 @@ module Weapons
     # puts "#{self} included in #{mod}"
   end
 
-  #  # def initialize(max_ammo=MAX_AMMO_DEFAULT)
-  #  #  @max_ammo = max_ammo
-  #  #  @remaining_ammo = @max_ammo
-  # end
-
   MAX_AMMO_DEFAULT = 30
   def weapons_setup(attributes = {})
     [:max_ammo].each do |attr|

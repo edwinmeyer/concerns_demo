@@ -24,7 +24,6 @@ end
   end
 end
 
-
 MAX_AMMO_SPECIFIED = 2
 
 describe "A class having Weapons ability" do
@@ -49,7 +48,6 @@ end
         obj = ClassWithWeaponsAbility.new(max_ammo: expected_ammo)
       end
 
-      # obj = use_default_values : ClassWithWeaponsAbility.new
       expect(obj.max_ammo).to eq(expected_ammo)
       expect(obj.remaining_ammo).to eq(expected_ammo)
     end

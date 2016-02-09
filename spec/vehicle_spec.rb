@@ -1,5 +1,5 @@
 # vehicle_spec.rb
-# Test Vehicle and all subclasses here
+# Vehicle and all subclasses are tested here
 
 # TODO: add proper directories to search path to avoid requiring individual files
 classes_to_test = [:vehicle, :car, :motorcycle, :tank, :helicopter, :quad_copter, :plane, :electric_car, :electric_motorcycle, :electric_tank]
@@ -69,7 +69,6 @@ end
       end
     end
 
-    # mobile expectations
     expected_values = common_defaults
     expected_values.merge!(k_data[:class_defaults]) if k_data[:class_defaults] # merge defaults set by class
     expected_values.merge!(k_data[:set_attributes]) # merge expected values set by this test

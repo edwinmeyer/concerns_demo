@@ -9,6 +9,7 @@ class PersonWithAbilities < Person
     include_abilities(abilities, attributes)
   end
 
+  protected
   def include_abilities(abilities, attributes)
     # An ability is any module which responds to is_ or has_ ability
     # puts "abilities before 'each': #{abilities}"

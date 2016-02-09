@@ -1,5 +1,4 @@
 module Mobile
-  # puts "Hello from module Mobile"
   def self.included(mod)
     # puts "#{self} included in #{mod}"
   end

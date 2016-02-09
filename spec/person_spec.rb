@@ -18,7 +18,6 @@ require_relative '../person_with_abilities'
     end
     let(:person) { k_data[:klass].new(*arg_list_for_new) }
     it "#{k_data[:fname]} #{k_data[:lname]} has a first and last name" do
-      # puts "person = #{person.inspect}"
       expect(person.first_name).to eq(k_data[:fname])
       expect(person.last_name).to eq(k_data[:lname])
       if k_data[:abilities]
@@ -31,7 +30,6 @@ require_relative '../person_with_abilities'
         if k_data[:abilities].include? :weapons
           expected_max_ammo = (k_data[:attributes] && k_data[:attributes].include?(:max_ammo)) ? k_data[:attributes][:max_ammo] : 6
           expect(person.max_ammo).to eq(expected_max_ammo)
-
         end
       end
 
@@ -42,7 +40,6 @@ require_relative '../person_with_abilities'
     # This is true of all instances where these attributes are not explicitly defined
     [:is_electric?, :is_mobile?, :has_weapons?].each do |bin_attr|
       ability = bin_attr[/.*_(\w+)\?/, 1] # get the 1st matched group
-      # puts "related ability for #{bin_attr}: #{ability}"
       expected_truth_value = k_data[:abilities] && k_data[:abilities].include?(ability.to_sym) || false
 
       it "##{bin_attr} returns #{expected_truth_value}" do
